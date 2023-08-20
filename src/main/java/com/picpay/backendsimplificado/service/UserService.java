@@ -21,7 +21,7 @@ public class UserService {
             throw new Exception("Usuário tipo Logista não pode realizar transação.");
         }
 
-        if(sender.getBalance().compareTo(amount) > 0){
+        if(sender.getBalance().compareTo(amount) < 0){
             throw new Exception("Saldo insuficiente");
         }
     }
